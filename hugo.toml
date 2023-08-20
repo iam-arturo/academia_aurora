@@ -1,0 +1,58 @@
+#title = "Notre-Dame de Paris"
+baseURL = "https://academiaaurora.com/"
+#baseURL = "/"
+languageCode = "es-es"
+theme = 'ananke'
+resourceDir = "../resources"
+uglyurls = true
+
+DefaultContentLanguage = "es"
+SectionPagesMenu = "main"
+Paginate = 3 # this is set low for demonstrating with dummy content. Set to a higher number
+googleAnalytics = ""
+enableRobotsTXT = true
+
+[languages]
+  [languages.es]
+    title = "Academia Aurora"
+    weight = 1
+    contentDir = "content/es"
+    # languageDirection = 'rtl' for Right-To-Left languages
+
+[sitemap]
+  changefreq = "monthly"
+  priority = 0.5
+  filename = "sitemap.xml"
+
+[params]
+  text_color = ""
+  author = ""
+  favicon = ""
+  #site_logo = "images/pcd_logo.png"
+  site_logo = ""
+  description = "The last theme you'll ever need. Maybe."
+  # choose a background color from any on this page: https://tachyons.io/docs/themes/skins/ and preface it with "bg-"
+  background_color_class = "bg-black"
+  recent_posts_number = 3
+
+[[params.ananke_socials]]
+  name = "twitter"
+  url = "https://twitter.com/MAECgob"
+
+[deployment]
+# By default, files are uploaded in an arbitrary order.
+# Files that match the regular expressions in the "Order" list
+# will be uploaded first, in the listed order.
+order = [".jpg$", ".gif$"]
+
+[[deployment.targets]]
+# An arbitrary name for this target.
+name = "s3bucket"
+
+# S3; see https://gocloud.dev/howto/blob/#s3
+# For S3-compatible endpoints, see https://gocloud.dev/howto/blob/#s3-compatible
+URL = "s3://academiaaurora.com?region=eu-south-2"
+
+
+# You can use a "prefix=" query parameter to target a subfolder of the bucket:
+# URL = "gs://<Bucket Name>?prefix=a/subfolder/"

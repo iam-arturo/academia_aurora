@@ -1,0 +1,46 @@
+{{ $.Scratch.Add "labelClasses" "f6 b db mb1 mt3 sans-serif mid-gray" }}
+{{ $.Scratch.Add "inputClasses" "w-100 f5 pv3 ph3 bg-light-gray bn" }}
+
+<form class="black-80 sans-serif" accept-charset="UTF-8" action="https://formsubmit.co/bb792796067152df5eb0f43ba26a6794"method="POST" role="form">
+
+    <label class="{{ $.Scratch.Get "labelClasses" }}"  for="name">{{ i18n "yourName" }}</label>
+    <input type="text" id="name" name="name" class="{{ $.Scratch.Get "inputClasses" }}"  required placeholder=" "  aria-labelledby="name"/>
+
+    <label class="{{ $.Scratch.Get "labelClasses" }}" for="email">{{ i18n "emailAddress" }}</label>
+    <input type="email" id="email" name="email" class="{{ $.Scratch.Get "inputClasses" }}"  required placeholder=" "  aria-labelledby="email"/>
+    <!-- <div class="requirements f6 gray glow i ph3 overflow-hidden">
+      {{ i18n "emailRequiredNote" }}
+    </div> -->
+
+    <label class="{{ $.Scratch.Get "labelClasses" }}" for="message">{{ i18n "message" }}</label>
+    <textarea id="message" name="message" placeholder=" " class="{{ $.Scratch.Get "inputClasses" }} h4" aria-labelledby="message"></textarea>
+
+    <input class="db w-100 mv2 white pa3 bn hover-shadow hover-bg-black bg-animate bg-black" type="submit" value="{{ i18n "send" }}" />
+
+</form>
+
+<!-- <form action="https://formsubmit.co/yonomiwu@mailgolem.com" method="POST">
+     <input type="text" name="name" required>
+     <input type="email" name="email" required>
+     <button type="submit">Send</button>
+</form> -->
+
+<!-- <div class="container">
+  <h1>Formulario de Contacto</h1>
+  <form target="_blank" action="https://formsubmit.co/your@email.com" method="POST">
+    <div class="form-group">
+      <div class="form-row">
+        <div class="col">
+          <input type="text" name="name" class="form-control" placeholder="Full Name" required>
+        </div>
+        <div class="col">
+          <input type="email" name="email" class="form-control" placeholder="Email Address" required>
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <textarea placeholder="Your Message" class="form-control" name="message" rows="10" required></textarea>
+    </div>
+    <button type="submit" class="btn btn-lg btn-dark btn-block">Submit Form</button>
+  </form>
+</div> -->
